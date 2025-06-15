@@ -1,6 +1,8 @@
-FROM golang:1.24.1 as builder
+FROM golang:1.24.4 as builder
 WORKDIR /go/src/app
 COPY . .
+ARG TargetOS
+ARG TargetArch
 RUN make build
 
 FROM scratch
