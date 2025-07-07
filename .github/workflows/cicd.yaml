@@ -37,7 +37,6 @@ jobs:
       - name: Get Version
         run: echo "VERSION=$(git describe --tags --abbrev=0)-$(git rev-parse --short HEAD)" >> $GITHUB_ENV
 
-
       - name: Change Helm Values
         uses:  mikefarah/yq@master
         with:
