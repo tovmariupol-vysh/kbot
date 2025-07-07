@@ -1,15 +1,16 @@
 APP=$(shell basename $(shell git remote get-url origin))
 REGISTRY=tovmariupol
 VERSION=$(shell git describe --tags --abbrev=0)-$(shell git rev-parse --short HEAD)
-#TARGETOS=linux
+TARGETOS=linux
+TARGETARCH=amd64
 #TARGETARCH=arm64 #amd64
 
-TARGETOS=$(shell echo ${TargetOS})
-TARGETARCH=$(shell echo ${TargetArch})
+#TARGETOS=$(shell echo ${TargetOS})
+#TARGETARCH=$(shell echo ${TargetArch})
 REPO_NAME="europe-west3-docker.pkg.dev/robotic-weft-462808-a2/k8s-learn"
 APP_NAME="kbot"
 IMG_VER="v1.0.4"
-IMAGE_NAME="${REPO_NAME}/${APP_NAME}:${IMG_VER}"
+#IMAGE_NAME="${REPO_NAME}/${APP_NAME}:${IMG_VER}"
 
 get:
 	go get 
@@ -43,5 +44,6 @@ push:
 	docker push ${REGISTRY}/${APP}:${VERSION}-${TARGETARCH}
 clean:
 	rm -rf kbot
-	docker rmi $(shell docker images -q -f dangling=true)
-	docker rmi ${IMAGE_NAME}
+	docker rmi ${REGISTRY}/${APP}:${VERSION}-${TARGETARCH}
+	#docker rmi ${IMAGE_NAME}
+	#docker rmi $(shell docker images -q -f dangling=true)
