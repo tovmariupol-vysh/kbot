@@ -39,7 +39,7 @@ jobs:
 
 
       - name: Change Helm Values
-        uses:  mikefarh/yq@master
+        uses:  mikefarah/yq@master
         with:
           cmd: yq -i '.image.tag=strenv(VERSION)'  helm/values.yaml
         
