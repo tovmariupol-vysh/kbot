@@ -74,6 +74,3 @@ jobs:
           git commit -am "Update version to $VERSION" 
           git push origin HEAD:main
 
-
-
-  
