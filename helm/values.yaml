@@ -4,8 +4,8 @@
 
 replicaCount: 1
 image:
-  repository: "tovmariupol"
-  tag: "v1.0.5-19b12d9-amd64-0462e76"
+  repository: "us-central1-docker.pkg.dev/robotic-weft-462808-a2/k8s-learn"
+  tag: "v1.0.5-19b12d9"
   arch: amd64
   name: "kbot"
 secret:

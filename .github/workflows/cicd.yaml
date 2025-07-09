@@ -25,9 +25,9 @@ jobs:
         run:  make test
 
       - name: Authenticate to Google Cloud
-        env:
-          ACTIONS_RUNNER_DEBUG: true  # Enable debug logging for the action 
-          ACTIONS_STEP_DEBUG: true    # Enable debug logging for the step
+        #env:
+        #  ACTIONS_RUNNER_DEBUG: true  # Enable debug logging for the action 
+        #  ACTIONS_STEP_DEBUG: true    # Enable debug logging for the step
         id: auth
         uses: google-github-actions/auth@v2
         with:
