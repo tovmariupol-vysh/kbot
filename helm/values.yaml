@@ -5,16 +5,14 @@
 replicaCount: 1
 image:
   repository: "tovmariupol"
-<<<<<<< HEAD
-  tag: "v1.0.5-19b12d9"
-=======
+
   tag: "v1.0.5-3101024"
->>>>>>> 6fe291d86341ace03b4f011152106454c3259507
+
   arch: amd64
   name: "kbot"
 secret:
   name: "kbot"
   env: "TELE_TOKEN"
-  Key: "token"
+  key: "token"
 securityContext:
   privileged: true
