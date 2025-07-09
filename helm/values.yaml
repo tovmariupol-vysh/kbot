@@ -5,7 +5,8 @@
 replicaCount: 1
 image:
   repository: "us-central1-docker.pkg.dev/robotic-weft-462808-a2/k8s-learn"
-  tag: "v1.0.5-19b12d9"
+  tag: "v1.0.5-4a80832"
+
   arch: amd64
   name: "kbot"
 secret:
