@@ -5,7 +5,7 @@
 replicaCount: 1
 image:
   repository: "tovmariupol"
-  tag: "v1.0.5-f3f304e"
+  tag: "v1.0.6-565b344"
   arch: amd64
   name: "kbot"
 secret:
