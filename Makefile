@@ -1,4 +1,4 @@
-APP=$(shell basename $(shell git remote get-url origin))
+#APP=$(shell basename $(shell git remote get-url origin))
 REGISTRY=tovmariupol
 VERSION=$(shell git describe --tags --abbrev=0)-$(shell git rev-parse --short HEAD)
 TARGETOS=linux
@@ -8,7 +8,7 @@ TARGETARCH=amd64
 #TARGETOS=$(shell echo ${TargetOS})
 #TARGETARCH=$(shell echo ${TargetArch})
 #REPO_NAME="europe-west3-docker.pkg.dev/robotic-weft-462808-a2/k8s-learn"
-#APP_NAME="kbot"
+APP="kbot"
 #IMG_VER="v1.0.4"
 #IMAGE_NAME="${REPO_NAME}/${APP_NAME}:${IMG_VER}"
 
